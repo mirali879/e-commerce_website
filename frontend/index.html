@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="./public/styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"
+        integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://js.stripe.com/v3/"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+        <script defer src="./public/js/toast.js"></script>
+        <script defer src="./public/js/methods.js"></script>
+        <script defer src="./public/js/script.js"></script>
+        <script defer src="./public/js/home.js"></script>
+</head>
+<body>
+    <div class="app_container">
+
+        <div class="navbar_box">
+        <div id="topNav">
+            <div class="topNavContent">
+                <div class="topNavLeft">
+                    <p> 
+                        <span>
+                        Mon-Thu:
+                    </span>
+                    9:00AM - 5:30PM</p>
+                </div>
+                <div class="topNavMiddle">
+                    <p>Visit our showroom in 1234 Street Address City Address, 1234</p>
+                    <a href="./public/html/contactUs.html">Contact Us</a>
+                </div>
+                <div class="topNavRight">
+                    <p>Call Us: (00)1233 4567</p>
+                    <img src="./public/icons/fbIcon.png" alt="facebook">
+                    <img src="./public/icons/InstaIcon.png" alt="instagram">
+                </div>
+                
+            </div>
+        </div>
+        <div id="navbar">
+            <div class="navContent">
+                <div class="navbarLeft">
+                    <img src="./public/images/logo.png"    alt="logo"/>
+                    <ul class="navList">
+                        <li><a href="./public/html/allProducts.html?category=gaming">Gaming</a></li>
+                        <li><a href="./public/html/allProducts.html?category=computer">Computer</a></li>
+                        <li><a href="./public/html/allProducts.html?category=phone">phone</a></li>
+                        <li><a href="./public/html/termsAndCondition.html">Terms And Conditions </a></li>
+                        <li><a href="./public/html/aboutUs.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="navbarRight">
+                        <img src="./public/icons/searchIcon.png" alt="searchIcon" class="nav_searchIcon">
+                    <a href="./public/html/shoppingCart.html" class="cartBox">
+                        <img src="./public/icons/cartIcon.png" alt="cartIcon" class="nav_cartIcon">
+                        <p class="cartCount"></p>
+                    </a>
+                    <a href="./public/html/myDashboard.html">
+
+                        <img  src="https://images.pexels.com/photos/13940670/pexels-photo-13940670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="accAvatar" class="userImg">
+                    </a>
+                    <a href="./public/html/Login.html">
+
+                        <button class="navbar_loginBtn">Log In</button>
+                    </a>
+                </div>
+                <img class="navMenuIcon" width="30" height="30" src="https://img.icons8.com/ios-filled/50/menu--v6.png" alt="menu--v6" />
+            </div>
+        </div>
+        </div>
+
+
+
+        <hr/>
+        <!-- drawer  start -->
+        <div class="drawer">
+           
+            <a class="drawer_item" href="./public/html/allProducts.html?category=gaming" >
+                <p>Gaming</p>
+            </a>
+            <a class="drawer_item" href="./public/html/allProducts.html?category=computer" >
+                <p>Computer</p>
+            </a>
+            
+            <a class="drawer_item" href="./public/html/aboutUs.html" >
+                <p>About Us</p>
+            </a>
+            <a class="drawer_item"  href="./public/html/shoppingCart.html">
+                <p>Cart</p>
+            </a>
+            <div class="drawer_item nav_searchIconDrawer">
+                <p>Search</p>
+            </div>
+            <a class="drawer_item" href="./public/html/termsAndCondition.html" >
+                <p>Terms And Conditions</p>
+            </a>
+            <a class="drawer_item" href="./public/html/myDashboard.html">
+                <p>Profile</p>
+            </a>
+            <div class="drawer_item closeDrawer">
+                <p>Close</p>
+            </div>
+
+        </div>
+
+        <!-- drawer end -->
+
+        <div style="display: none;" class="searchModal">
+            <div class="modalContent">
+                <div class="closeModalButton">
+
+                    <img  width="50" height="50" src="https://img.icons8.com/ios-filled/50/delete-sign--v1.png" alt="delete-sign--v1" />
+                </div>
+                <input type="text" placeholder="search for products" class="searchModalInput">
+                <div class="modalSearchItemWrapper">
+                
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="heroSection">
+            <div class="sliderImg_wrapper">
+
+                <img src="./public/images/sliderImg.png" alt="sliderImg1">
+            </div>
+            
+            <div class="newProducts_section">
+                <div class="newProducts_header">
+                    <h2 class="topicTitle">New Products</h2>
+                    <a class="seeAllButton"  href="./public/html/allProducts.html">See All New Products</a>
+                </div>
+                <div class="newProducts_card_wrapper homeAllProducts">
+                </div>
+                <!-- category start  -->
+                <div class="categorySection">
+
+                   <div class="categoryHeaer">
+                       <div class="categoryLeft">
+                        <div class="topicTop">
+
+                            
+                            <div class="styledBox">
+                            </div>
+                                <p class="topicName">Category</p>
+                        </div>
+                        <h3 class="topicTitle">Browse By Category</h3>
+                        </div>
+                    </div>
+                    <div class="categoryWrapper">
+                        <a class="categoryItem" href="./public/html/allProducts.html?category=phone">
+                
+                            <img width="94" height="94" src="./public/icons/cellphone.png" alt="laptop" />
+                            <h3>Phone</h3>
+                        </a>
+                    <a class="categoryItem" href="./public/html/allProducts.html?category=watch">
+                            <img width="94" height="94" src="./public/icons/watch.png" alt="keyboard--v2" />
+                            <h3>Watch</h3>
+                    </a>
+                    <a class="categoryItem" href="./public/html/allProducts.html?category=gaming">
+                            <img width="94" height="94" src="./public/icons/gaming.png" alt="under-computer" />
+                            <h3>Gaming</h3>
+                    </a>
+                <a class="categoryItem" href="./public/html/allProducts.html?category=camera">
+                            <img width="94" height="94" src="./public/icons/camera.png" alt="controller" />
+                            <h3>Camera</h3>
+                </a>
+                    <a class="categoryItem" href="./public/html/allProducts.html?category=computer">
+                            <img width="94" height="94" src="./public/icons/pc.png" alt="car" />
+                            <h3>Computer</h3>
+                        </a>
+                    <a class="categoryItem" href="./public/html/allProducts.html?category=headphone">
+                            <img width="94" height="94" src="./public/icons/headphone.png" alt="ssd" />
+                            <h3>Headphones</h3>
+                    </a>
+                </div>
+                </div>
+                    <!-- catetory ends  -->
+                <!-- best sellings  -->
+                <div class="categorySection">
+                
+                    <div class="categoryHeaer">
+                        <div class="categoryLeft">
+
+          
+                        <div class="topicTop">
+                            <div class="styledBox">
+                            </div>
+                            <p class="topicName">This month</p>
+                        </div>
+
+                        <h3 class="topicTitle">Best Selling Products</h3>
+                                    </div>
+                        <a  class="seeAllButton" href="./public/html/allProducts.html">
+                            See all products
+                        </a>
+                    </div>
+                    <div class="categoryWrapper" id="topSellingWrapper">
+                    
+                    </div>
+                </div>
+                <!-- best seeelingg ends -->
+
+                </div>
+            
+                <div class="newProducts_card_wrapper allLaptops">
+                    <div class="customeBuild_banner">
+                        <div class="customBg"></div>
+                        <div class="customBuildContent">
+
+                            <div class="customBuilMainText">
+                                
+                                <h3>Laptops</h3>
+                            </div>
+                            <a href="./public/html/allProducts.html">See All Products</a>
+                        </div>
+                    </div>
+       
+           
+           
+                </div>
+                <div class="Msi_Gs_Series_list">
+                    <ul class="Msi_Gs_Series_list_items">
+                        <li><a class="Msi_Gs_Series_active" href="#">MSI GS SERIES</a></li>
+                        <li><a href="#">MSI GT SERIES</a></li>
+                        <li><a href="#">MSI GL SERIES</a></li>
+                        <li><a href="#">MSI GE SERIES</a></li>
+                    </ul>
+                </div>
+                <div class="newProducts_card_wrapper allMonitors" >
+                    <div class="customeBuild_banner" id="customeBuild_banner2">
+                        <div class="customBg"></div>
+                        <div class="customBuildContent">
+
+                            <div class="customBuilMainText">
+                                
+                                <h3>Monitors</h3>
+                            </div>
+                            <a href="./public/html/allProducts.html">See All Products</a>
+                        </div>
+                    </div>
+         
+              
+          
+                </div>
+                <div class="Msi_Gs_Series_list">
+                    <ul class="Msi_Gs_Series_list_items">
+                        <li><a class="Msi_Gs_Series_active" href="#">MSI GS SERIES</a></li>
+                        <li><a href="#">MSI GT SERIES</a></li>
+                        <li><a href="#">MSI GL SERIES</a></li>
+                        <li><a href="#">MSI GE SERIES</a></li>
+                    </ul>
+                </div>
+                <div class="newProducts_card_wrapper allDesktops" >
+                    <div class="customeBuild_banner" id="customeBuild_banner3">
+                        <div class="customBg"></div>
+                        <div class="customBuildContent">
+
+                            <div class="customBuilMainText">
+                                
+                                <h3>Desktops</h3>
+                            </div>
+                            <a href="../frontend/public/html/allProducts.html">See All Products</a>
+                        </div>
+                    </div>
+         
+              
+          
+                </div>
+            </div>
+
+        </div>
+        <div class="sponcers_wrapper">
+            <div class="sponcers_innerWrapper">
+                <div class="sponcers_img_wrapper">
+
+                    <img src="./public/images/adata_brand.png" alt="sponcers">
+                    <img src="./public/images/msi_brand.png" alt="sponcers">
+                    <img src="./public/images/hewlet_brand.png" alt="sponcers">
+                    <img src="./public/images/rocart_brand.png" alt="sponcers">
+                    <img src="./public/images/thermaltake_brand.png" alt="sponcers">
+                    <img src="./public/images/gigaByte_brand.png" alt="sponcers">
+                </div>
+            </div>
+        </div>
+        <div class="supportSection">
+            <div class="support_box">
+                <div class="support_box_imgWrapper">
+                    <img src="./public/icons/bx_bx-support.png" alt="support">
+                </div>
+                <div class="support_box_details">
+
+                    <h2>Product Support</h2>
+                    <p>Up to 3 years on-site warranty available for your peace of mind.</p>
+                </div>
+            </div>
+            <div class="support_box">
+                <div class="support_box_imgWrapper">
+                    <img src="./public/icons/ri_account.png" alt="support">
+                </div>
+                <div class="support_box_details">
+
+                    <h2>Personal Account</h2>
+                    <p>With big discounts, free delivery and a dedicated support specialist.</p>
+                </div>
+            </div>
+            <div class="support_box">
+                <div class="support_box_imgWrapper">
+                    <img src="./public/icons/entypo_price-tag.png" alt="support">
+                </div>
+                <div class="support_box_details">
+
+                    <h2>Amazing Savings</h2>
+                    <p>Up to 70% off new Products, you can be sure of the best price.</p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+
+                <div class="footerInnerContent">
+
+                    
+                    <div class="footer_content">
+                        
+                        
+                        <div class="footer_subscribe_box">
+                            <div class="footer_subscribe_box_left">
+                                <h1>Sign In To Our Newsletter.</h1>
+                                <p>Be the first to hear about the latest offers.</p>
+                            </div>
+                            <div class="footer_subscribe_box_right">
+                                <input type="text" placeholder="Your Email" />
+                                <button class="footer_subscribe_btn">Subscribe</button>
+                            </div>
+                        </div>
+                        <div class="footer_items_box">
+                            <div class="footer_item">
+                                <p>Information</p>
+                                <ul class="footer_item_lists">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">About Zip</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Search</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="#">Orders and Returns</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Advance Search</a></li>
+                                    <li><a href="#">Newsletter Subscription</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_item">
+                                <p>PC Parts</p>
+                                <ul class="footer_item_lists">
+                                    <li><a href="#">CPUs</a></li>
+                                    <li><a href="#">Add On Cards</a></li>
+                                    <li><a href="#">Hard Drives (Internal)</a></li>
+                                    <li><a href="#">Graphic Cards</a></li>
+                                    <li><a href="#">Keyboard/ Mouse</a></li>
+                                    <li><a href="#">Cases/ Power Supplies/ Cooling</a></li>
+                                    <li><a href="#">RAM (Memory)</a></li>
+                                    <li><a href="#">Software</a></li>
+                                    <li><a href="#">Speakers/ Headsets</a></li>
+                                    <li><a href="#">Motherboards</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_item">
+                                <p>Desktop PCs</p>
+                                <ul class="footer_item_lists">
+                                    <li><a href="#">Custom PCs</a></li>
+                                    <li><a href="#">Servers</a></li>
+                                    <li><a href="#">MSI All-In-One PCs</a></li>
+                                    <li><a href="#">HP/ Compaq PCs</a></li>
+                                    <li><a href="#">ASUS PCs</a></li>
+                                    <li><a href="#">Tecs PCs</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="footer_item">
+                                <p>Laptops</p>
+                                <ul class="footer_item_lists">
+                                    <li><a href="#">Everyday Use Notebooks</a></li>
+                                    <li><a href="#">MSI Workstation Series</a></li>
+                                    <li><a href="#">MSI Prestige Series</a></li>
+                                    <li><a href="#">Tablets and Pads</a></li>
+                                    <li><a href="#">Netbooks</a></li>
+                                    <li><a href="#">Infinity Gaming Notebooks</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="footer_item">
+                                <p>Address</p>
+                                <ul class="footer_item_lists">
+                                    <li><a href="#">Address: 1234 Street Address City Address, 1234</a></li>
+                                    <li><a href="#">Phones: <span>(00)1234 5678</span></a></li>
+                                    <li><a href="#">We are open: Monday - Thursday: 9:00 AM - 5:30 PM</a></li>
+                                    <li><a href="#">Friday: 9:00 AM - 6:00 PM</a></li>
+                                    <li><a href="#">E-mail: <span>shop@gmail.com</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <hr/>
+                    <div class="footer_copywrite_section">
+                        <div class="footer_copywrite_section_item">
+                            <img class="footer_socialMedia_icon" src="./public/icons/fbFooter.png" alt="fb">
+                            <img class="footer_socialMedia_icon" src="./public/icons/instaFooter.png" alt="insta">
+                        </div>
+                        <div class="footer_copywrite_section_item">
+                            <img class="footer_payment_img" src="./public/icons/paypal.png" alt="payment">
+                            <img class="footer_payment_img" src="./public/icons/visa.png" alt="payment">
+                            <img class="footer_payment_img" src="./public/icons/american-express.png" alt="payment">
+                            <img class="footer_payment_img" src="./public/icons/maestro.png" alt="payment">
+                        </div>
+                        <div class="footer_copywrite_section_item">
+                            <p>Copyright &copy; 2023 Shop Pvt. Ltd</p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                    
+         </footer>
+            </div>
+            
+            
+            <!-- script for toast  -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        </body>
+        </html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/adminProduct.css">
+                <script src="https://js.stripe.com/v3/"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="../js/methods.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/script.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/toast.js"></script>
+    <script defer src="../js/admin.js"></script>
+    
+
+</head>
+<body>
+    <div class="navbar_box">
+    <div id="topNav">
+        <div class="topNavContent">
+        <div class="topNavLeft">
+            <p> <span>
+
+                Mon-Thu:
+            </span>
+             9:00AM - 5:30PM</p>
+        </div>
+        <div class="topNavMiddle">
+            <p>Visit our showroom in 1234 Street Address City Address, 1234</p>
+            <a href="./contactUs.html">Contact Us</a>
+        </div>
+        <div class="topNavRight">
+            <p>Call Us: (00)1233 4567</p>
+            <img src="../icons/fbIcon.png" alt="facebook">
+            <img src="../icons/InstaIcon.png" alt="instagram">
+        </div>
+        </div>
+    
+    </div>
+    <div id="navbar">
+        <div class="navContent">
+
+            <div class="navbarLeft">
+                <a href="../../index.html">
+
+                    <img src="../images/logo.png" alt="logo" class="logo"/>
+                </a>
+                <ul class="navList">
+                    <li><a href="./allProducts.html?category=gaming">Gaming</a></li>
+                    <li><a href="./allProducts.html?category=computer">Computer</a></li>
+                            <li><a href="./allProducts.html?category=phone">phone</a></li>
+
+                    <li><a href="./termsAndCondition.html">Terms And Conditions </a></li>
+                    <li><a href="./aboutUs.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="navbarRight">
+                    <img src="../icons/searchIcon.png" alt="searchIcon" class="nav_searchIcon">
+                <a href="./shoppingCart.html" class="cartBox">
+                    <img src="../icons/cartIcon.png" alt="cartIcon" class="nav_cartIcon">
+                    <p class="cartCount"></p>
+                </a>
+                <a href="./myDashboard.html">
+
+                    <img  src="https://images.pexels.com/photos/13940670/pexels-photo-13940670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="accAvatar" class="userImg">
+                </a>
+                <a href="./Login.html">
+
+                    <button class="navbar_loginBtn">Log In</button>
+                </a>
+            </div>
+            <img class="navMenuIcon" width="30" height="30" src="https://img.icons8.com/ios-filled/50/menu--v6.png" alt="menu--v6" />
+        </div>
+    </div>
+</div>
+    <hr/>
+    <!-- drawer  start -->
+    <div class="drawer">
+    
+        <a class="drawer_item" href="./allProducts.html?category=gaming">
+            <p>Gaming</p>
+        </a>
+        <a class="drawer_item" href="./allProducts.html?category=computer">
+            <p>Computer</p>
+        </a>
+    
+        <a class="drawer_item" href="./aboutUs.html">
+            <p>About Us</p>
+        </a>
+        <a class="drawer_item" href="./shoppingCart.html">
+            <p>Cart</p>
+        </a>
+        <div class="drawer_item nav_searchIconDrawer">
+            <p>Search</p>
+        </div>
+        <a class="drawer_item" href="./termsAndCondition.html">
+            <p>Terms And Conditions</p>
+        </a>
+        <a class="drawer_item" href="./myDashboard.html">
+            <p>Profile</p>
+        </a>
+        <div class="drawer_item closeDrawer">
+            <p>Close</p>
+        </div>
+    
+    </div>
+    
+    <!-- drawer end -->
+    <div style="display: none;" class="searchModal">
+        <div class="modalContent">
+            <div class="closeModalButton">
+
+                <img  width="50" height="50" src="https://img.icons8.com/ios-filled/50/delete-sign--v1.png" alt="delete-sign--v1" />
+            </div>
+            <input type="text" placeholder="search for products" class="searchModalInput">
+            <div class="modalSearchItemWrapper">
+            
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="admin_product_container">
+        <div class="admin_product_sidebar">
+            <ul class="admin_product_item">
+                <li data-sidebarItem="adminDashboard.html"  class="adminSideListitem"><a href="./adminDashboard.html"><svg width="14" height="14" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.8889 8.33333V0H25V8.33333H13.8889ZM0 13.8889V0H11.1111V13.8889H0ZM13.8889 25V11.1111H25V25H13.8889ZM0 25V16.6667H11.1111V25H0Z" fill="#040404"/>
+                    </svg>
+                    Dashboard</a></li>
+                <li data-sidebarItem="adminProduct.html"  class="adminSideListitem"><a href="./adminProduct.html">
+                    <img width="20" height="20" src="https://img.icons8.com/windows/32/open-box.png" alt="open-box"/>
+                    
+                    Product</a></li>
+                <li data-sidebarItem="adminPendingOrder.html"  class="adminSideListitem"><a href="./adminPendingOrder.html"><svg width="16" height="16" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 20C18.6125 20 17.5 21.1125 17.5 22.5C17.5 23.163 17.7634 23.7989 18.2322 24.2678C18.7011 24.7366 19.337 25 20 25C20.663 25 21.2989 24.7366 21.7678 24.2678C22.2366 23.7989 22.5 23.163 22.5 22.5C22.5 21.837 22.2366 21.2011 21.7678 20.7322C21.2989 20.2634 20.663 20 20 20ZM0 0V2.5H2.5L7 11.9875L5.3 15.05C5.1125 15.4 5 15.8125 5 16.25C5 16.913 5.26339 17.5489 5.73223 18.0178C6.20107 18.4866 6.83696 18.75 7.5 18.75H22.5V16.25H8.025C7.94212 16.25 7.86263 16.2171 7.80403 16.1585C7.74542 16.0999 7.7125 16.0204 7.7125 15.9375C7.7125 15.875 7.725 15.825 7.75 15.7875L8.875 13.75H18.1875C19.125 13.75 19.95 13.225 20.375 12.4625L24.85 4.375C24.9375 4.175 25 3.9625 25 3.75C25 3.41848 24.8683 3.10054 24.6339 2.86612C24.3995 2.6317 24.0815 2.5 23.75 2.5H5.2625L4.0875 0M7.5 20C6.1125 20 5 21.1125 5 22.5C5 23.163 5.26339 23.7989 5.73223 24.2678C6.20107 24.7366 6.83696 25 7.5 25C8.16304 25 8.79893 24.7366 9.26777 24.2678C9.73661 23.7989 10 23.163 10 22.5C10 21.837 9.73661 21.2011 9.26777 20.7322C8.79893 20.2634 8.16304 20 7.5 20Z" fill="black"/>
+                    </svg>
+                    Order</a></li>
+            </ul>
+        </div>
+        <div class="admin_product_content">
+            <div class="admin_product_topBar">
+                <!-- <h2>Products</h2> -->
+                <a href="./adminUpload.html" class="admin_product_create_btn">
+                    + Create new
+                </a>
+            </div>
+            <!-- <div class="admin_product_searchBar">
+             
+                <select class="admin_product_select">
+                    <option value="choose" selected disabled>category</option>
+                    
+                </select>
+                  
+                    
+                  
+            </div> -->
+            <div class="admin_product_card_container">
+
+               
+
+            </div>
+        </div>
+    </div>
+    <div class="supportSection">
+        <div class="support_box">
+            <div class="support_box_imgWrapper">
+                <img src="../icons/bx_bx-support.png" alt="support">
+            </div>
+            <div class="support_box_details">
+
+                <h2>Product Support</h2>
+                <p>Up to 3 years on-site warranty available for your peace of mind.</p>
+            </div>
+        </div>
+        <div class="support_box">
+            <div class="support_box_imgWrapper">
+                <img src="../icons/ri_account.png" alt="support">
+            </div>
+            <div class="support_box_details">
+
+                <h2>Personal Account</h2>
+                <p>With big discounts, free delivery and a dedicated support specialist.</p>
+            </div>
+        </div>
+        <div class="support_box">
+            <div class="support_box_imgWrapper">
+                <img src="../icons/entypo_price-tag.png" alt="support">
+            </div>
+            <div class="support_box_details">
+
+                <h2>Amazing Savings</h2>
+                <p>Up to 70% off new Products, you can be sure of the best price.</p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footerInnerContent">
+        <div class="footer_content">
+
+    
+        <div class="footer_subscribe_box">
+            <div class="footer_subscribe_box_left">
+                <h1>Sign In To Our Newsletter.</h1>
+                <p>Be the first to hear about the latest offers.</p>
+            </div>
+            <div class="footer_subscribe_box_right">
+                <input type="text" placeholder="Your Email" />
+                <button class="footer_subscribe_btn">Subscribe</button>
+            </div>
+        </div>
+        <div class="footer_items_box">
+            <div class="footer_item">
+                <p>Information</p>
+                <ul class="footer_item_lists">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">About Zip</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Orders and Returns</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Advance Search</a></li>
+                    <li><a href="#">Newsletter Subscription</a></li>
+                </ul>
+            </div>
+            <div class="footer_item">
+                <p>PC Parts</p>
+                <ul class="footer_item_lists">
+                    <li><a href="#">CPUs</a></li>
+                    <li><a href="#">Add On Cards</a></li>
+                    <li><a href="#">Hard Drives (Internal)</a></li>
+                    <li><a href="#">Graphic Cards</a></li>
+                    <li><a href="#">Keyboard/ Mouse</a></li>
+                    <li><a href="#">Cases/ Power Supplies/ Cooling</a></li>
+                    <li><a href="#">RAM (Memory)</a></li>
+                    <li><a href="#">Software</a></li>
+                    <li><a href="#">Speakers/ Headsets</a></li>
+                    <li><a href="#">Motherboards</a></li>
+                </ul>
+            </div>
+            <div class="footer_item">
+                <p>Desktop PCs</p>
+                <ul class="footer_item_lists">
+                    <li><a href="#">Custom PCs</a></li>
+                    <li><a href="#">Servers</a></li>
+                    <li><a href="#">MSI All-In-One PCs</a></li>
+                    <li><a href="#">HP/ Compaq PCs</a></li>
+                    <li><a href="#">ASUS PCs</a></li>
+                    <li><a href="#">Tecs PCs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_item">
+                <p>Laptops</p>
+                <ul class="footer_item_lists">
+                    <li><a href="#">Everyday Use Notebooks</a></li>
+                    <li><a href="#">MSI Workstation Series</a></li>
+                    <li><a href="#">MSI Prestige Series</a></li>
+                    <li><a href="#">Tablets and Pads</a></li>
+                    <li><a href="#">Netbooks</a></li>
+                    <li><a href="#">Infinity Gaming Notebooks</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_item">
+                <p>Address</p>
+                <ul class="footer_item_lists">
+                    <li><a href="#">Address: 1234 Street Address City Address, 1234</a></li>
+                    <li><a href="#">Phones: <span>(00)1234 5678</span></a></li>
+                    <li><a href="#">We are open: Monday - Thursday: 9:00 AM - 5:30 PM</a></li>
+                    <li><a href="#">Friday: 9:00 AM - 6:00 PM</a></li>
+                    <li><a href="#">E-mail: <span>shop@gmail.com</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <hr/>
+    <div class="footer_copywrite_section">
+        <div class="footer_copywrite_section_item">
+            <img src="../icons/fbFooter.png" alt="fb">
+            <img src="../icons/instaFooter.png" alt="fb">
+        </div>
+        <div class="footer_copywrite_section_item">
+            <img src="../icons/paypal.png" alt="payment">
+            <img src="../icons/visa.png" alt="payment">
+            <img src="../icons/american-express.png" alt="payment">
+            <img src="../icons/maestro.png" alt="payment">
+        </div>
+        <div class="footer_copywrite_section_item">
+            <p>Copyright &copy; 2023 Shop Pvt. Ltd</p>
+        </div>
+    </div>
+    </div>
+    </footer>
+   
+            <!-- script for toast  -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    
+</body>
+</html>

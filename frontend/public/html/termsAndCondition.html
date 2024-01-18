@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <link rel="stylesheet" href="../styles/style.css">
+     <script src="https://js.stripe.com/v3/"></script>
+
+    <link rel="stylesheet" href="../styles/termsAndCondition.css">
+    <script defer src="../js/methods.js"></script>
+    <script defer src="../js/script.js"></script>
+</head>
+
+<body>
+    <div class="termsAndCondtion_container">
+        <div class="navbar_box">
+        <div id="topNav">
+            <div class="topNavContent">
+            <div class="topNavLeft">
+                <p> <span>
+
+                    Mon-Thu:
+                </span>
+                 9:00AM - 5:30PM</p>
+            </div>
+            <div class="topNavMiddle">
+                <p>Visit our showroom in 1234 Street Address City Address, 1234</p>
+                <a href="./contactUs.html">Contact Us</a>
+            </div>
+            <div class="topNavRight">
+                <p>Call Us: (00)1233 4567</p>
+                <img src="../icons/fbIcon.png" alt="facebook">
+                <img src="../icons/InstaIcon.png" alt="instagram">
+            </div>
+            </div>
+        
+        </div>
+        <div id="navbar">
+            <div class="navContent">
+    
+                <div class="navbarLeft">
+                    <a href="../../index.html">
+
+                        <img src="../images/logo.png" alt="logo" class="logo"/>
+                    </a>
+                    <ul class="navList">
+                        <li><a href="./allProducts.html?category=gaming">Gaming</a></li>
+                        <li><a href="./allProducts.html?category=computer">Computer</a></li>
+                            <li><a href="./allProducts.html?category=phone">phone</a></li>
+
+                        <li><a href="./termsAndCondition.html">Terms And Conditions </a></li>
+                        <li><a href="./aboutUs.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="navbarRight">
+                        <img src="../icons/searchIcon.png" alt="searchIcon" class="nav_searchIcon">
+                    <a href="./shoppingCart.html" class="cartBox">
+                        <img src="../icons/cartIcon.png" alt="cartIcon" class="nav_cartIcon">
+                        <p class="cartCount"></p>
+                    </a>
+                    <a href="./myDashboard.html">
+    
+                        <img  src="https://images.pexels.com/photos/13940670/pexels-photo-13940670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="accAvatar" class="userImg">
+                    </a>
+                    <a href="./Login.html">
+    
+                        <button class="navbar_loginBtn">Log In</button>
+                    </a>
+                </div>
+                <img class="navMenuIcon" width="30" height="30" src="https://img.icons8.com/ios-filled/50/menu--v6.png" alt="menu--v6" />
+            </div>
+        </div>
+    </div>
+        <hr/>
+        <!-- drawer  start -->
+        <div class="drawer">
+        
+            <a class="drawer_item" href="./allProducts.html?category=gaming">
+                <p>Gaming</p>
+            </a>
+            <a class="drawer_item" href="./allProducts.html?category=computer">
+                <p>Computer</p>
+            </a>
+        
+            <a class="drawer_item" href="./aboutUs.html">
+                <p>About Us</p>
+            </a>
+            <a class="drawer_item" href="./shoppingCart.html">
+                <p>Cart</p>
+            </a>
+            <div class="drawer_item nav_searchIconDrawer">
+                <p>Search</p>
+            </div>
+            <a class="drawer_item" href="./termsAndCondition.html">
+                <p>Terms And Conditions</p>
+            </a>
+            <a class="drawer_item" href="./myDashboard.html">
+                <p>Profile</p>
+            </a>
+            <div class="drawer_item closeDrawer">
+                <p>Close</p>
+            </div>
+        
+        </div>
+        
+        <!-- drawer end -->
+        <div style="display: none;" class="searchModal">
+            <div class="modalContent">
+                <div class="closeModalButton">
+
+                    <img  width="50" height="50" src="https://img.icons8.com/ios-filled/50/delete-sign--v1.png" alt="delete-sign--v1" />
+                </div>
+                <input type="text" placeholder="search for products" class="searchModalInput">
+                <div class="modalSearchItemWrapper">
+                
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="termsAndCondition_content">
+            <div class="termsAndCondition_innerContent">
+                <div class="termsAndContion_navigation">
+                    <p>Home</p>
+                    <span>></span>
+                    <p>Terms and Conditions</p>
+                </div>
+                <h2 id="termsAndCondition_header">Shop Terms & Conditions</h2>
+
+                <div class="FAQ_section">
+
+                
+
+                <div class="termsAndCondition_leftInnerContent">
+                   
+                    <h3 id="general_terms_header">GENERAL TERMS AND CONDITIONS FOR SALE OF PRODUCTS AND SERVICES</h3>
+                    <div class="termsAndCondition_section">
+                        <h4>Definitions & Interpretation</h4>
+                        <p>In the following Terms and Conditions of sale, unless the context requires otherwise</p>
+                        
+                        <ol type="a" class="termsAndCondition_rules">
+                            <li>"Shop" means Shop Pty Ltd ABN 11 222 333 444;</li>
+                            <li>Customer" means the person or corporation placing an order for the purchase of goods or services from Shop;</li>
+                            <li>"Products" means any goods, materials, equipment or services provided to the Customer by Shop;</li>
+                            <li> if the Customer comprises more than one person, each of those person’s liability is joint and several;</li>
+                            <li>references to a party or a person includes any form of entity and their respective successors, assigns and representatives; </li>
+                            <li> for all periods and times specified in clauses 5 and 11, time is of the essence; and</li>
+                            <li>all references to currency are references to Australian dollars. </li>
+    
+                        </ol>
+                        <h4>General</h4>
+                        <p>By ordering the Products and/or accepting delivery of the Products from Shop, the Customer agrees that it is bound by these Terms and Conditions of sale. Customer orders, including orders placed via the internet, are subject to acceptance by Shop. The acceptance of the Customer's order by Shop is expressly made conditional upon the Customer's assent to these Terms and Conditions which will prevail notwithstanding anything that may be stated to the contrary on the Customer's order. Shop reserves the right to vary any of these terms at any time and any subsequent orders placed by the Customer will constitute an acceptance of the terms as varied. Once a Customer order has been placed and accepted by Shop, the Customer agrees that the Customer has no right to cancel or vary the order at any time, unless agreed upon in writing by both parties.</p>
+    
+                        
+                    </div>
+                </div>
+                <div class="termsAndCondition_RightInnerContent">
+                    <h3>Definitions & Interpretation</h3>
+                    <ul class="definitionAndInterpretation_lists">
+                        <li>General</li>
+                        <li>Quotations</li>
+                        <li>Prices / Taxes</li>
+                        <li>Terms of Payment</li>
+                        <li>Credit Account</li>
+                        <li>Change of Ownership</li>
+                        <li>Information on the Products supplied</li>
+                        <li>Delivery</li>
+                    </ul>
+                </div>
+            </div>
+               
+            </div>
+        </div>
+
+        <div class="supportSection">
+            <div class="support_box">
+                <div class="support_box_imgWrapper">
+                    <img src="../icons/bx_bx-support.png" alt="support">
+                </div>
+                <div class="support_box_details">
+
+                    <h2>Product Support</h2>
+                    <p>Up to 3 years on-site warranty available for your peace of mind.</p>
+                </div>
+            </div>
+            <div class="support_box">
+                <div class="support_box_imgWrapper">
+                    <img src="../icons/ri_account.png" alt="support">
+                </div>
+                <div class="support_box_details">
+
+                    <h2>Personal Account</h2>
+                    <p>With big discounts, free delivery and a dedicated support specialist.</p>
+                </div>
+            </div>
+            <div class="support_box">
+                <div class="support_box_imgWrapper">
+                    <img src="../icons/entypo_price-tag.png" alt="support">
+                </div>
+                <div class="support_box_details">
+
+                    <h2>Amazing Savings</h2>
+                    <p>Up to 70% off new Products, you can be sure of the best price.</p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footerInnerContent">
+            <div class="footer_content">
+
+        
+            <div class="footer_subscribe_box">
+                <div class="footer_subscribe_box_left">
+                    <h1>Sign In To Our Newsletter.</h1>
+                    <p>Be the first to hear about the latest offers.</p>
+                </div>
+                <div class="footer_subscribe_box_right">
+                    <input type="text" placeholder="Your Email" />
+                    <button class="footer_subscribe_btn">Subscribe</button>
+                </div>
+            </div>
+            <div class="footer_items_box">
+                <div class="footer_item">
+                    <p>Information</p>
+                    <ul class="footer_item_lists">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">About Zip</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Orders and Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Advance Search</a></li>
+                        <li><a href="#">Newsletter Subscription</a></li>
+                    </ul>
+                </div>
+                <div class="footer_item">
+                    <p>PC Parts</p>
+                    <ul class="footer_item_lists">
+                        <li><a href="#">CPUs</a></li>
+                        <li><a href="#">Add On Cards</a></li>
+                        <li><a href="#">Hard Drives (Internal)</a></li>
+                        <li><a href="#">Graphic Cards</a></li>
+                        <li><a href="#">Keyboard/ Mouse</a></li>
+                        <li><a href="#">Cases/ Power Supplies/ Cooling</a></li>
+                        <li><a href="#">RAM (Memory)</a></li>
+                        <li><a href="#">Software</a></li>
+                        <li><a href="#">Speakers/ Headsets</a></li>
+                        <li><a href="#">Motherboards</a></li>
+                    </ul>
+                </div>
+                <div class="footer_item">
+                    <p>Desktop PCs</p>
+                    <ul class="footer_item_lists">
+                        <li><a href="#">Custom PCs</a></li>
+                        <li><a href="#">Servers</a></li>
+                        <li><a href="#">MSI All-In-One PCs</a></li>
+                        <li><a href="#">HP/ Compaq PCs</a></li>
+                        <li><a href="#">ASUS PCs</a></li>
+                        <li><a href="#">Tecs PCs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_item">
+                    <p>Laptops</p>
+                    <ul class="footer_item_lists">
+                        <li><a href="#">Everyday Use Notebooks</a></li>
+                        <li><a href="#">MSI Workstation Series</a></li>
+                        <li><a href="#">MSI Prestige Series</a></li>
+                        <li><a href="#">Tablets and Pads</a></li>
+                        <li><a href="#">Netbooks</a></li>
+                        <li><a href="#">Infinity Gaming Notebooks</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_item">
+                    <p>Address</p>
+                    <ul class="footer_item_lists">
+                        <li><a href="#">Address: 1234 Street Address City Address, 1234</a></li>
+                        <li><a href="#">Phones: <span>(00)1234 5678</span></a></li>
+                        <li><a href="#">We are open: Monday - Thursday: 9:00 AM - 5:30 PM</a></li>
+                        <li><a href="#">Friday: 9:00 AM - 6:00 PM</a></li>
+                        <li><a href="#">E-mail: <span>shop@gmail.com</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <hr/>
+        <div class="footer_copywrite_section">
+            <div class="footer_copywrite_section_item">
+                <img src="../icons/fbFooter.png" alt="fb">
+                <img src="../icons/instaFooter.png" alt="fb">
+            </div>
+            <div class="footer_copywrite_section_item">
+                <img src="../icons/paypal.png" alt="payment">
+                <img src="../icons/visa.png" alt="payment">
+                <img src="../icons/american-express.png" alt="payment">
+                <img src="../icons/maestro.png" alt="payment">
+            </div>
+            <div class="footer_copywrite_section_item">
+                <p>Copyright &copy; 2023 Shop Pvt. Ltd</p>
+            </div>
+        </div>
+        </div>
+        </footer>
+    </div>
+    
+</body>
+</html>

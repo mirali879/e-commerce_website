@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/aboutUs.css">
+       <script src="https://js.stripe.com/v3/"></script>
+
+    <script defer src="../js/methods.js"></script>
+    <script defer src="../js/script.js"></script>
+</head>
+<body>
+    <div class="aboutUs_container">
+        <div class="navbar_box">
+
+       
+        <div id="topNav">
+            <div class="topNavContent">
+            <div class="topNavLeft">
+                <p> <span>
+
+                    Mon-Thu:
+                </span>
+                 9:00AM - 5:30PM</p>
+            </div>
+            <div class="topNavMiddle">
+                <p>Visit our showroom in 1234 Street Address City Address, 1234</p>
+                <a href="./contactUs.html">Contact Us</a>
+            </div>
+            <div class="topNavRight">
+                <p>Call Us: (00)1233 4567</p>
+                <img src="../icons/fbIcon.png" alt="facebook">
+                <img src="../icons/InstaIcon.png" alt="instagram">
+            </div>
+            </div>
+        
+        </div>
+        <div id="navbar">
+            <div class="navContent">
+    
+                <div class="navbarLeft">
+                    <a href="../../index.html">
+                        <img src="../images/logo.png" alt="logo" class="logo"/>
+                    </a>
+                    <ul class="navList">
+                        <li><a href="./allProducts.html?category=gaming">Gaming</a></li>
+                        <li><a href="./allProducts.html?category=computer">Computer</a></li>
+                            <li><a href="./allProducts.html?category=phone">phone</a></li>
+                        <li><a href="./termsAndCondition.html">Terms And Conditions </a></li>
+                        <li><a href="./aboutUs.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="navbarRight">
+                        <img src="../icons/searchIcon.png" alt="searchIcon" class="nav_searchIcon">
+                    <a href="./shoppingCart.html" class="cartBox">
+                        <img src="../icons/cartIcon.png" alt="cartIcon" class="nav_cartIcon">
+                        <p class="cartCount"></p>
+                    </a>
+                    <a href="./myDashboard.html">
+    
+                        <img  src="https://images.pexels.com/photos/13940670/pexels-photo-13940670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="accAvatar" class="userImg">
+                    </a>
+                    <a href="./Login.html">
+    
+                        <button class="navbar_loginBtn">Log In</button>
+                    </a>
+                </div>
+                <img class="navMenuIcon" width="30" height="30" src="https://img.icons8.com/ios-filled/50/menu--v6.png" alt="menu--v6" />
+            </div>
+        </div>
+    </div>
+        <hr/>
+         <!-- drawer  start -->
+         <div class="drawer">
+        
+            <a class="drawer_item" href="./allProducts.html?category=gaming">
+                <p>Gaming</p>
+            </a>
+            <a class="drawer_item" href="./allProducts.html?category=computer">
+                <p>Computer</p>
+            </a>
+        
+            <a class="drawer_item" href="./aboutUs.html">
+                <p>About Us</p>
+            </a>
+            <a class="drawer_item" href="./shoppingCart.html">
+                <p>Cart</p>
+            </a>
+            <div class="drawer_item nav_searchIconDrawer" >
+                <p>Search</p>
+            </div>
+            <a class="drawer_item" href="./termsAndCondition.html">
+                <p>Terms And Conditions</p>
+            </a>
+            <a class="drawer_item" href="./myDashboard.html">
+                <p>Profile</p>
+            </a>
+            <div class="drawer_item closeDrawer">
+                <p>Close</p>
+            </div>
+        
+        </div>
+        
+        <!-- drawer end -->
+        <div style="display: none;" class="searchModal">
+            <div class="modalContent">
+                <div class="closeModalButton">
+
+                    <img  width="50" height="50" src="https://img.icons8.com/ios-filled/50/delete-sign--v1.png" alt="delete-sign--v1" />
+                </div>
+                <input type="text" placeholder="search for products" class="searchModalInput">
+                <div class="modalSearchItemWrapper">
+                
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="aboutUs_content">
+           <div class="aboutUs_navigation">
+            <div class="aboutUs_page_navigate">
+                <p>Home</p>
+                <span>&gt;</span>
+                <p>About Us</p>
+            </div>
+            <h2 class="aboutUs_navigation_header">About Us</h2>
+           </div>
+           <div class="aboutUs_banner_box">
+            <div class="aboutUs_banner_innerBox">
+                <div class="aboutUs_banner_text_wrapper">
+                   <div class="aboutUs_banner_text">
+                    <h2>A Family That Keeps On Growing</h2>
+                    <p>We always aim to please the home market, supplying great computers and hardware at great prices to non-corporate customers, through our large Melbourne CBD showroom and our online store. </p>
+                    <p>Shop management approach fosters a strong customer service focus in our staff. We prefer to cultivate long-term client relationships rather than achieve quick sales, demonstrated in the measure of our long-term success.</p>
+                   </div>
+                </div>
+                <div class="aboutUs_banner_img_wrapper">
+                    <div class="aboutUs_banner_img_box">
+                        <img src="../images/room.png" alt="room">
+                    </div>
+                </div>
+            </div>
+           </div>
+           <div class="aboutUs_banner_box" id="aboutUs_banner_box2">
+            <div class="aboutUs_banner_innerBox" id="aboutUs_banner_innerBox2">
+                <div class="aboutUs_banner_text_wrapper">
+                   <div class="aboutUs_banner_text" id="aboutUs_banner_text2">
+                    <h2>Shop.com</h2>
+                    <p>Shop.com is a proudly Australian owned, Melbourne based supplier of I.T. goods and services, operating since 1991. Our client base encompasses individuals, small business, corporate and government organisations. We provide complete business IT solutions, centred on high quality hardware and exceptional customer service. </p>
+                   
+                   </div>
+                </div>
+                <div class="aboutUs_banner_img_wrapper">
+                    <div class="aboutUs_banner_img_box">
+                        <img src="../images/keyboard.png" alt="bannerImg">
+                    </div>
+                </div>
+            </div>
+           </div>
+           <div class="aboutUs_banner_box" id="aboutUs_banner_box3">
+            <div class="aboutUs_banner_innerBox" id="aboutUs_banner_innerBox3">
+                <div class="aboutUs_banner_text_wrapper">
+                   <div class="aboutUs_banner_text" id="aboutUs_banner_text3">
+                    <h2>Now You're In Safe Hands</h2>
+                    <p>Experience a 40% boost in computing from last generation. MSI Desktop equips the 10th Gen. Intel® Core™ i7 processor with the upmost computing power to bring you an unparalleled gaming experience. </p>
+                    <p>*Performance compared to i7-9700. Specs varies by model.</p>
+                   
+                   </div>
+                </div>
+                <div class="aboutUs_banner_img_wrapper">
+                    <div class="aboutUs_banner_img_box">
+                        <img src="../images/cpuBanner.png" alt="bannerImg">
+                    </div>
+                </div>
+            </div>
+           </div>
+           <div class="aboutUs_banner_box" id="aboutUs_banner_box4">
+            <div class="aboutUs_banner_innerBox" id="aboutUs_banner_innerBox4">
+                <div class="aboutUs_banner_text_wrapper">
+                   <div class="aboutUs_banner_text" id="aboutUs_banner_text4">
+                    <h2>The Highest Quality of Products</h2>
+                    <p>We guarantee the highest quality of the products we sell. Several decades of successful operation and millions of happy customers let us feel certain about that. Besides, all items we sell pass thorough quality control, so no characteristics mismatch can escape the eye of our professionals.</p>
+                   
+                   </div>
+                </div>
+                <div class="aboutUs_banner_img_wrapper">
+                    <div class="aboutUs_banner_img_box">
+                        <img src="../images/cpuBanner2.png" alt="bannerImg">
+                    </div>
+                </div>
+            </div>
+           </div>
+           <div class="aboutUs_banner_box" id="aboutUs_banner_box5">
+            <div class="aboutUs_banner_innerBox" id="aboutUs_banner_innerBox5">
+                <div class="aboutUs_banner_text_wrapper">
+                   <div class="aboutUs_banner_text" id="aboutUs_banner_text5">
+                    <h2>We Deliver to Any Regions</h2>
+                    <p>We deliver our goods all across Australia. No matter where you live, your order will be shipped in time and delivered right to your door or to any other location you have stated. The packages are handled with utmost care, so the ordered products will be handed to you safe and sound, just like you expect them to be.</p>
+                   
+                   </div>
+                </div>
+                <div class="aboutUs_banner_img_wrapper">
+                    <div class="aboutUs_banner_img_box">
+                        <img src="../images/cpuBanner3.png" alt="bannerImg">
+                    </div>
+                </div>
+            </div>
+           </div>
+     
+        </div>
+        <div class="supportSection">
+            <div class="support_box">
+                <div class="support_box_imgWrapper">
+                    <img src="../icons/bx_bx-support.png" alt="support">
+                </div>
+                <div class="support_box_details">
+
+                    <h2>Product Support</h2>
+                    <p>Up to 3 years on-site warranty available for your peace of mind.</p>
+                </div>
+            </div>
+            <div class="support_box">
+                <div class="support_box_imgWrapper">
+                    <img src="../icons/ri_account.png" alt="support">
+                </div>
+                <div class="support_box_details">
+
+                    <h2>Personal Account</h2>
+                    <p>With big discounts, free delivery and a dedicated support specialist.</p>
+                </div>
+            </div>
+            <div class="support_box">
+                <div class="support_box_imgWrapper">
+                    <img src="../icons/entypo_price-tag.png" alt="support">
+                </div>
+                <div class="support_box_details">
+
+                    <h2>Amazing Savings</h2>
+                    <p>Up to 70% off new Products, you can be sure of the best price.</p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footerInnerContent">
+            <div class="footer_content">
+
+        
+            <div class="footer_subscribe_box">
+                <div class="footer_subscribe_box_left">
+                    <h1>Sign In To Our Newsletter.</h1>
+                    <p>Be the first to hear about the latest offers.</p>
+                </div>
+                <div class="footer_subscribe_box_right">
+                    <input type="text" placeholder="Your Email" />
+                    <button class="footer_subscribe_btn">Subscribe</button>
+                </div>
+            </div>
+            <div class="footer_items_box">
+                <div class="footer_item">
+                    <p>Information</p>
+                    <ul class="footer_item_lists">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">About Zip</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Orders and Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Advance Search</a></li>
+                        <li><a href="#">Newsletter Subscription</a></li>
+                    </ul>
+                </div>
+                <div class="footer_item">
+                    <p>PC Parts</p>
+                    <ul class="footer_item_lists">
+                        <li><a href="#">CPUs</a></li>
+                        <li><a href="#">Add On Cards</a></li>
+                        <li><a href="#">Hard Drives (Internal)</a></li>
+                        <li><a href="#">Graphic Cards</a></li>
+                        <li><a href="#">Keyboard/ Mouse</a></li>
+                        <li><a href="#">Cases/ Power Supplies/ Cooling</a></li>
+                        <li><a href="#">RAM (Memory)</a></li>
+                        <li><a href="#">Software</a></li>
+                        <li><a href="#">Speakers/ Headsets</a></li>
+                        <li><a href="#">Motherboards</a></li>
+                    </ul>
+                </div>
+                <div class="footer_item">
+                    <p>Desktop PCs</p>
+                    <ul class="footer_item_lists">
+                        <li><a href="#">Custom PCs</a></li>
+                        <li><a href="#">Servers</a></li>
+                        <li><a href="#">MSI All-In-One PCs</a></li>
+                        <li><a href="#">HP/ Compaq PCs</a></li>
+                        <li><a href="#">ASUS PCs</a></li>
+                        <li><a href="#">Tecs PCs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_item">
+                    <p>Laptops</p>
+                    <ul class="footer_item_lists">
+                        <li><a href="#">Everyday Use Notebooks</a></li>
+                        <li><a href="#">MSI Workstation Series</a></li>
+                        <li><a href="#">MSI Prestige Series</a></li>
+                        <li><a href="#">Tablets and Pads</a></li>
+                        <li><a href="#">Netbooks</a></li>
+                        <li><a href="#">Infinity Gaming Notebooks</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_item">
+                    <p>Address</p>
+                    <ul class="footer_item_lists">
+                        <li><a href="#">Address: 1234 Street Address City Address, 1234</a></li>
+                        <li><a href="#">Phones: <span>(00)1234 5678</span></a></li>
+                        <li><a href="#">We are open: Monday - Thursday: 9:00 AM - 5:30 PM</a></li>
+                        <li><a href="#">Friday: 9:00 AM - 6:00 PM</a></li>
+                        <li><a href="#">E-mail: <span>shop@gmail.com</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <hr/>
+        <div class="footer_copywrite_section">
+            <div class="footer_copywrite_section_item">
+                <img src="../icons/fbFooter.png" alt="fb">
+                <img src="../icons/instaFooter.png" alt="fb">
+            </div>
+            <div class="footer_copywrite_section_item">
+                <img src="../icons/paypal.png" alt="payment">
+                <img src="../icons/visa.png" alt="payment">
+                <img src="../icons/american-express.png" alt="payment">
+                <img src="../icons/maestro.png" alt="payment">
+            </div>
+            <div class="footer_copywrite_section_item">
+                <p>Copyright &copy; 2023 Shop Pvt. Ltd</p>
+            </div>
+        </div>
+        </div>
+        </footer>
+    </div>
+    
+</body>
+</html>

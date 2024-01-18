@@ -1,0 +1,221 @@
+.myDashboard_content{
+    padding: 1rem 0;
+}
+.myDashboard_innerContent{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.myDashbaord_page_navigate{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+}
+.myDashboard_header{
+    font-size: 25px;
+    font-weight: 600;
+}
+.account_dashboard_information_wrapper{
+    display: flex;
+    gap: 2rem;
+}
+.account_dashboard_box{
+    flex: 2.5;
+    background-color: #F5F7FF;
+    padding: 1rem;
+}
+.account_dashboard_box_items{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.account_information_box{
+    flex: 9.5;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.account_dashboard_box_items li a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #666;
+}
+
+#account_information_box_header{
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.account_information_info_box_{
+    display: flex;
+    width: 75%;
+}
+.account_information_info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: space-between;
+}
+.account_information_info h3{
+    font-size: 14px;
+    font-weight: 500;
+}
+.account_information_info_para p{
+    font-size: 14px;
+    font-weight: 300;
+    color: #666;
+}
+.account_information_info_links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.account_information_info_links a{
+    font-size: 13px;
+    font-weight: 300;
+    color: #0156FF;
+}
+.account_information_edit_acccount{
+    display: none;
+}
+.admin_dashboard_table thead tr th{
+    font-size: 11px;
+}
+.admin_dashboard_table tbody tr td {
+    padding: 10px;
+
+    font-size: 10px;
+    color: gray;
+}
+
+/* .admin_dashboard_order_status{
+    background-color: rgba(50, 214, 0, 0.228);
+    color: rgb(0, 164, 11);
+    border-radius: 5px;
+    
+} */
+.admin_dashboard_table{
+    width: 100%;
+}
+.orderAllList{
+    width: 100%;
+}
+
+ tr {
+    height: 70px;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #F4F7FF;
+}
+
+ tr:hover {
+    background-color: rgba(128, 128, 128, 0.138);
+
+}
+
+.adminDashboardTopic {
+    letter-spacing: 2px;
+    color: #0156FF;
+}
+
+.admin_dashboard_item li {
+    background-color: rgba(128, 128, 128, 0.09);
+
+}
+
+.account_information_edit_acccount input{
+
+    border: none;
+    font-size: 12px;
+    outline: none;
+    color: #A2A6B0;
+    border-radius: 4px;
+    border: 1px solid #A2A6B0;
+    background: #FFF;
+    height: 40px;
+    padding-left: 5px;
+}
+.account_information_edit_acccount{
+    /* display: flex;  */
+    flex-direction: column;
+    gap: 5px;
+    width: 45%;
+}
+.logutBtn{
+    width: fit-content;
+    padding: 10px 1rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50px;
+    background-color: #0156FF;
+    color: #fff;
+    font-size: 12px;
+}
+
+/* media query  */
+
+@media only screen and (min-width: 769px) and (max-width: 992px){
+    .account_dashboard_box {
+        flex: 1;
+    }
+    .account_information_box {
+        flex: 1;
+        display: flex;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:768px){
+    .myDashboard_header {
+        font-size: 21px;
+        font-weight: 600;
+    }
+    .account_dashboard_box {
+        flex: 1;
+    }
+    .account_information_box {
+        flex: 1;
+        display: flex;
+        gap: 10px;
+    }
+}
+@media screen and (min-width:480px) and (max-width:599px){
+    .account_dashboard_information_wrapper {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
+}
+@media screen  and (max-width:480px){
+    .account_dashboard_information_wrapper {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .myDashboard_header {
+        font-size: 19px;
+    }
+    .myDashbaord_page_navigate {
+        font-size: 11px;
+    }
+    .account_dashboard_box_items li a {
+        font-size: 12px;
+    }
+    #account_information_box_header {
+        font-size: 14px;
+    }
+    .account_information_info_para p {
+        font-size: 13px;
+    }
+    .account_information_box {
+      
+        display: flex;
+        gap: 12px;
+    }
+}

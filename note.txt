@@ -1,0 +1,1 @@
+This website is made using html, css, js, nodejs and mongoDb for database. And payment is done using stripe.
